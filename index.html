@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ENCABEZADO Y RECURSOS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarovski</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- HEADER: BARRA DE NAVEGACIÓN -->
+    <header class="container-fluid bg-white">
+        <nav class="navbar navbar-expand-lg bg-white py-4 fixed-top">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="img/logo/logo-swarovski.png" alt="Logo de Swarovski con forma de cisne"
+                        class="me-2 logo-img">
+                </a>
+
+                <!-- BOTÓN HAMBURGUESA PARA MÓVIL -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra"
+                    aria-controls="barra" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- MENÚ DE NAVEGACIÓN -->
+                <div class="collapse navbar-collapse" id="barra">
+                    <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
+                        <li class="nav-item"><a class="nav-link text-dark" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#ofrecemos">Ofrecemos</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#el-mundo-de-swarovski">El mundo de
+                                Swarovski</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#contacto">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark p-0" href="#" data-bs-toggle="modal"
+                                data-bs-target="#modal_alumna">
+                                <i class="bi bi-person" style="font-size: 1.8rem;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- PROMO MODAL -->
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 p-0 overflow-hidden border-0 shadow-lg w-100 w-md-75 w-lg-50">
+
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="w-100">
+                <img src="img/imagen-suscribite/regalo-suscribete.png"
+                    alt="Promo visual" class="img-fluid w-100" style="object-fit: cover; max-height: 250px;">
+            </div>
+
+            <div class="modal-body text-center px-3 px-md-5 pt-0 pb-4">
+                <h2 id="promoModalLabel" class="fw-bold mb-3 text-uppercase fs-6">SUSCRIBITE AHORA!</h2>
+                <p class="mb-4 text-muted small">Obtené un 10% de descuento en tu primera compra.</p>
+
+                <form id="subscribeForm">
+                    <div class="mb-3">
+                        <input type="email" class="form-control form-control-sm rounded-2" placeholder="E-mail*" required>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-dark btn-sm rounded-2">Registrate</button>
+                    </div>
+                    <div class="form-check d-flex justify-content-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="checkNotificaciones">
+                        <label class="form-check-label small" for="checkNotificaciones">
+                            Acepto recibir notificaciones.
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <section id="hero" class="bg-light">
+        <div id="heroCarousel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column flex-md-row">
+                        <picture class="col-md-6">
+                            <source media="(max-width:430px)" srcset="img/carousel/mobile/banner1.png">
+                            <source media="(max-width:768px)" srcset="img/carousel/tablet/banner1.png">
+                            <img class="carousel-image" src="img/carousel/desktop/banner1.png"
+                                alt="Salón claro con sofá y TV" width="800" height="533">
+                        </picture>
+                        <div
+                            class="carousel-text__wrapper col-md-6 d-flex align-items-center justify-content-center bg-light text-dark p-5 text-center text-lg-start">
+                            <div class="carousel-text">
+                                <h2 class="display-5 fw-bold">Brilla con tu propia luz</h2>
+                                <p class="lead mb-0">Joyas <em>que hacen brillar</em> tu personalidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex flex-column flex-md-row">
+                        <picture class="col-md-6">
+                            <source media="(max-width:430px)" srcset="img/carousel/mobile/banner2.png">
+                            <source media="(max-width:768px)" srcset="img/carousel/tablet/banner2.png">
+                            <img class="carousel-image" src="img/carousel/desktop/banner2.png"
+                                alt="Mujer sonriente cocinando" width="800" height="533">
+                        </picture>
+                        <div
+                            class="carousel-text__wrapper col-md-6 d-flex align-items-center justify-content-center bg-light text-dark p-5 text-center text-lg-start">
+                            <div class="carousel-text">
+                                <h2 class="display-5 fw-bold">Descubre tu brillo interior</h2>
+                                <p class="lead mb-0">Joyas llenas de luz y <em>sofisticación</em>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex flex-column flex-md-row">
+                        <picture class="col-md-6">
+                            <source media="(max-width:430px)" srcset="img/carousel/mobile/banner3.png">
+                            <source media="(max-width:768px)" srcset="img/carousel/tablet/banner3.png">
+                            <img class="carousel-image" src="img/carousel/desktop/banner3.png"
+                                alt="Rincón con silla y libros" width="800" height="533">
+                        </picture>
+                        <div
+                            class="carousel-text__wrapper col-md-6 d-flex align-items-center justify-content-center bg-light text-dark p-5 text-center text-lg-start">
+                            <div class="carousel-text">
+                                <h2 class="display-5 fw-bold">Destaca con brillo</h2>
+                                <p class="lead mb-0">Haz brillar tu belleza natural con <em>Swarovski</em>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+                aria-label="Anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+                aria-label="Siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- SECCIÓN: NOSOTROS -->
+        <section id="nosotros" class="py-5 bg-color-claro" aria-labelledby="nosotros-titulo">
+            <h2 id="nosotros-titulo" class="fw-bold pb-4 color-grey text-center">Nosotros</h2>
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6">
+                        <p>
+                            En 2016 comenzamos un viaje para traer la <strong>magia del cristal de Swarovski</strong> al
+                            corazón de Argentina. Nuestra pasión es ofrecer <strong>piezas que reflejen brillo,
+                                elegancia y lujo</strong> en cada detalle.
+                        </p>
+                        <p>
+                            Creemos que <strong>cada joya tiene una historia y un encanto único</strong>. Por eso,
+                            <strong>seleccionamos cuidadosamente nuestras colecciones</strong>, promoviendo ideas de
+                            sustentabilidad y <strong>estilo atemporal</strong> para nuestros clientes más exigentes.
+                        </p>
+                    </div>
+
+                    <figure class="col-md-6 mb-0">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="img/nosotros/nosotros-pc.png">
+                            <source media="(min-width: 768px)" srcset="img/nosotros/nosotros-tablet.png">
+                            <img src="img/nosotros/nosotros-mobile.png"
+                                alt="Imagen representativa de la empresa y su historia." class="w-100 rounded-4"
+                                loading="lazy">
+                        </picture>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: OFRECEMOS -->
+        <section id="ofrecemos" class="py-5 bg-color-black" aria-labelledby="ofrecemos-titulo">
+            <h2 id="ofrecemos-titulo" class="fw-bold pb-4 color-grey text-center">Ofrecemos</h2>
+            <div class="container">
+                <div class="row flex-lg-row-reverse align-items-center g-4">
+                    <div class="col-md-6">
+                        <p>
+                            En nuestra página web, <strong>ofrecemos</strong> productos exclusivos de Swarovski, una
+                            marca reconocida mundialmente por su cristal de alta calidad y diseños elegantes. Descubrí
+                            nuestra colección y no dudes en contactarnos para más detalles.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="fw-bold mb-2 border-bottom border-2 pb-2">Calidad excepcional</li>
+                            <li class="fw-bold mb-2 border-bottom border-2 pb-2">Innovación en diseño</li>
+                            <li class="fw-bold mb-2 border-bottom border-2 pb-2">Elegancia y lujo</li>
+                            <li class="fw-bold mb-2 border-bottom border-2 pb-2">Amplia variedad de productos</li>
+                        </ul>
+                    </div>
+
+                    <figure class="col-md-6 mb-0">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="img/ofrecemos/ofrecemos-pc.png">
+                            <source media="(min-width: 768px)" srcset="img/ofrecemos/ofrecemos-tablet.png">
+                            <img src="img/ofrecemos/ofrecemos-mobil.png"
+                                alt="Imagen ilustrativa de productos en exhibición con diseño elegante."
+                                class="w-100 rounded-4" loading="lazy">
+                        </picture>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PRODUCTOS -->
+        <section id="productos" class="py-2 bg-color-claro" aria-labelledby="productos-titulo">
+            <h2 id="productos-titulo" class="text-center fw-bold mb-4 color-grey">Productos</h2>
+            <article class="container">
+                <h3 class="visually-hidden">Listado de productos</h3>
+                <ul class="row mx-1 justify-content-md-center list-unstyled" style="padding-left:0; margin:0;">
+                    <!-- Producto 1 -->
+                    <li class="col-sm-6 col-lg-4 col-xxl-4 mb-4">
+                        <article class="card border-0 h-100">
+                            <figure class="card-img-top">
+                                <picture>
+                                    <source media="(min-width: 992px)"
+                                        srcset="img/productos/producto1/producto1-pc.png">
+                                    <source media="(min-width: 768px)"
+                                        srcset="img/productos/producto1/producto1-tablet.png">
+                                    <img src="img/productos/producto1/producto1-mobile.png"
+                                        alt="Pulsera Emily Blanco con baño de rodio" class="w-75 d-block mx-auto"
+                                        width="300" height="300" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title color-grey fs-4">Pulsera Emily Blanco - Baño de Rodio</h3>
+                                <p class="card-text mt-4 small">¡Una pulsera clásica con un brillo que dice más de mil
+                                    palabras! Delicados cristales transparentes adornan esta pulsera chapada en rodio. A
+                                    pesar de presentar un estilo minimalista.</p>
+                            </div>
+                            <div class="card-footer row align-items-center border-0">
+                                <p class="fs-4 color-grey col my-3">$318.000</p>
+                                <a href="#"
+                                    class="card-link fs-5 btn btn-lg btn-primary border-0 rounded-pill px-3 col my-3"
+                                    data-bs-toggle="modal" data-bs-target="#modal_producto"
+                                    aria-label="Agregar Pulsera Emily Blanco">Agregar</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Producto 2 -->
+                    <li class="col-sm-6 col-lg-4 col-xxl-4 mb-4">
+                        <article class="card border-0 h-100">
+                            <figure class="card-img-top">
+                                <picture>
+                                    <source media="(min-width: 992px)"
+                                        srcset="img/productos/producto2/producto2-pc.png">
+                                    <source media="(min-width: 768px)"
+                                        srcset="img/productos/producto2/producto2-tablet.png">
+                                    <img src="img/productos/producto2/producto2-mobile.png"
+                                        alt="Pulsera Tennis Ariana Grande" class="w-75 d-block mx-auto" width="300"
+                                        height="300" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title color-grey fs-4">Pulsera Tennis Ariana Grande</h3>
+                                <p class="card-text mt-4 small">El diseño con baño de rodio presenta un círculo completo
+                                    de cristales en forma de corazón, cada uno rodeado por un halo resplandeciente de
+                                    pavé transparente.</p>
+                            </div>
+                            <div class="card-footer row align-items-center border-0">
+                                <p class="fs-4 color-grey col my-3">$668.000</p>
+                                <a href="#"
+                                    class="card-link fs-5 btn btn-lg btn-primary border-0 rounded-pill px-3 col my-3"
+                                    data-bs-toggle="modal" data-bs-target="#modal_producto"
+                                    aria-label="Agregar Pulsera Tennis Ariana Grande">Agregar</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Producto 3 -->
+                    <li class="col-sm-6 col-lg-4 col-xxl-4 mb-4">
+                        <article class="card border-0 h-100">
+                            <figure class="card-img-top">
+                                <picture>
+                                    <source media="(min-width: 992px)"
+                                        srcset="img/productos/producto3/producto3-pc.png">
+                                    <source media="(min-width: 768px)"
+                                        srcset="img/productos/producto3/producto3-tablet.png">
+                                    <img src="img/productos/producto3/producto3-mobile.png"
+                                        alt="Brazalete Meteora, Pavé nieve" class="w-75 d-block mx-auto" width="300"
+                                        height="300" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title color-grey fs-4">Brazalete Meteora, Pavé nieve</h3>
+                                <p class="card-text mt-4 small">La banda bañada en rodio envuelve grácilmente la muñeca
+                                    y presenta cristales transparentes redondos en pavé de nieve en la parte superior.
+                                    Un maravilloso toque de refinamiento para tus looks diarios.</p>
+                            </div>
+                            <div class="card-footer row align-items-center border-0">
+                                <p class="fs-4 color-grey col my-3">$456.000</p>
+                                <a href="#"
+                                    class="card-link fs-5 btn btn-lg btn-primary border-0 rounded-pill px-3 col my-3"
+                                    data-bs-toggle="modal" data-bs-target="#modal_producto"
+                                    aria-label="Agregar Brazalete Meteora Pavé nieve">Agregar</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Producto 4 -->
+                    <li class="col-sm-6 col-lg-4 col-xxl-4 mb-4">
+                        <article class="card border-0 h-100">
+                            <figure class="card-img-top">
+                                <picture>
+                                    <source media="(min-width: 992px)"
+                                        srcset="img/productos/producto4/producto4-pc.png">
+                                    <source media="(min-width: 768px)"
+                                        srcset="img/productos/producto4/producto4-tablet.png">
+                                    <img src="img/productos/producto4/producto4-mobile.png"
+                                        alt="Colgante Solitaire Blanco - Baño de Rodio" class="w-75 d-block mx-auto"
+                                        width="300" height="300" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title color-grey fs-4">Colgante Solitaire Blanco - Baño de Rodio</h3>
+                                <p class="card-text mt-4 small">Presentamos una interpretación nueva e impresionante de
+                                    nuestro colgante líder en ventas Solitaire, uno de nuestros diseños más populares y
+                                    un verdadero clásico de Swarovski.</p>
+                            </div>
+                            <div class="card-footer row align-items-center border-0">
+                                <p class="fs-4 color-grey col my-3">$346.000</p>
+                                <a href="#"
+                                    class="card-link fs-5 btn btn-lg btn-primary border-0 rounded-pill px-3 col my-3"
+                                    data-bs-toggle="modal" data-bs-target="#modal_producto"
+                                    aria-label="Agregar Colgante Solitaire Blanco">Agregar</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Producto 5 -->
+                    <li class="col-sm-6 col-lg-4 col-xxl-4 mb-4">
+                        <article class="card border-0 h-100">
+                            <figure class="card-img-top">
+                                <picture>
+                                    <source media="(min-width: 992px)"
+                                        srcset="img/productos/producto5/producto5-pc.png">
+                                    <source media="(min-width: 768px)"
+                                        srcset="img/productos/producto5/producto5-tablet.png">
+                                    <img src="img/productos/producto5/producto5-mobile.png"
+                                        alt="Colgante Ariana Grande X, Corazón" class="w-75 d-block mx-auto" width="300"
+                                        height="300" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title color-grey fs-4">Colgante Ariana Grande X, Corazón</h3>
+                                <p class="card-text mt-4 small">Sigue a tu corazón y deja que el romance brille con este
+                                    radiante colgante de Swarovski. Suspendido de una delicada cadena, este diseño con
+                                    baño de rodio presenta un cristal en forma de corazón.</p>
+                            </div>
+                            <div class="card-footer row align-items-center border-0">
+                                <p class="fs-4 color-grey col my-3">$389.000</p>
+                                <a href="#"
+                                    class="card-link fs-5 btn btn-lg btn-primary border-0 rounded-pill px-3 col my-3"
+                                    data-bs-toggle="modal" data-bs-target="#modal_producto"
+                                    aria-label="Agregar Colgante Ariana Grande Corazón">Agregar</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Producto 6 -->
+                    <li class="col-sm-6 col-lg-4 col-xxl-4 mb-4">
+                        <article class="card border-0 h-100">
+                            <figure class="card-img-top">
+                                <picture>
+                                    <source media="(min-width: 992px)"
+                                        srcset="img/productos/producto6/producto6-pc.png">
+                                    <source media="(min-width: 768px)"
+                                        srcset="img/productos/producto6/producto6-tablet.png">
+                                    <img src="img/productos/producto6/producto6-mobile.png" alt="Colgante Constella"
+                                        class="w-75 d-block mx-auto" width="300" height="300" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title color-grey fs-4">Colgante Constella</h3>
+                                <p class="card-text mt-4 small">Ese es el aspecto de este impactante colgante de la
+                                    familia Constella. Con una increíble piedra central, está acabado con una cadena
+                                    bañada en rodio y la emblemática técnica pavé de Swarovski en el diseño lateral.</p>
+                            </div>
+                            <div class="card-footer row align-items-center border-0">
+                                <p class="fs-4 color-grey col my-3">$389.000</p>
+                                <a href="#"
+                                    class="card-link fs-5 btn btn-lg btn-primary border-0 rounded-pill px-3 col my-3"
+                                    data-bs-toggle="modal" data-bs-target="#modal_producto"
+                                    aria-label="Agregar Colgante Constella">Agregar</a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECCIÓN: EL MUNDO DE SWAROVSKI -->
+        <section id="el-mundo-de-swarovski" class="py-5 bg-color-black" aria-labelledby="titulo-mundo-swarovski">
+            <h2 id="titulo-mundo-swarovski" class="fw-bold pb-4 color-grey text-center">El mundo de Swarovski</h2>
+            <article class="container">
+                <h3 class="visually-hidden">Galería de productos Swarovski</h3>
+                <p class="text-md-center">
+                    Cada pieza en nuestra colección ha sido seleccionada para resaltar tu estilo y personalidad. Desde
+                    elegantes aros y collares hasta pulseras deslumbrantes, nuestras piezas reflejan la luz y el brillo
+                    que te hacen sentir única.
+                </p>
+
+                <p class="text-md-center fw-bold">
+                    ¡Deja que la belleza y el brillo de Swarovski sean parte de tu historia!
+                </p>
+
+                <div class="row">
+                    <figure class="col-sm-12 col-md-6 col-lg-4 p-3 m-0 d-flex flex-column align-items-center">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/galeria_aros/galeria_aros_tablet.png">
+                            <img src="img/galeria_aros/galeria_aros_mobile.png"
+                                alt="Imagen de mujer con aros de Swarovski" class="w-100 rounded-4" loading="lazy"
+                                width="400" height="400">
+                        </picture>
+                        <figcaption class="figure-caption pt-2 fw-semibold color-grey">
+                            "Elegancia que perdura en cada detalle."
+                        </figcaption>
+                    </figure>
+
+                    <figure class="col-sm-12 col-md-6 col-lg-4 p-3 m-0 d-flex flex-column align-items-center">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="img/galeria_colgante/galeria_colgantes_tablet.png">
+                            <img src="img/galeria_colgante/galeria_colgantes_mobile.png"
+                                alt="Imagen de mujer con colgante de Swarovski" class="w-100 rounded-4" loading="lazy"
+                                width="400" height="400">
+                        </picture>
+                        <figcaption class="figure-caption pt-2 fw-semibold color-grey">
+                            "El encanto de Swarovski, en cada gema."
+                        </figcaption>
+                    </figure>
+
+                    <figure class="col-sm-12 col-md-6 col-lg-4 p-3 m-0 d-flex flex-column align-items-center">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/galeria_pulsera/galeria_pulseras_tablet.png">
+                            <img src="img/galeria_pulsera/galeria_pulseras_mobile.png"
+                                alt="Imagen de mujer con pulsera de Swarovski" class="w-100 rounded-4" loading="lazy"
+                                width="400" height="400">
+                        </picture>
+                        <figcaption class="figure-caption pt-2 fw-semibold color-grey">
+                            "Brilla con estilo y sofisticación."
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+
+        <!-- SECCIÓN: Preguntas Frecuentes -->
+        <section id="faq" class="py-4 bg-color-claro">
+            <div class="container">
+                <h2 class="fw-bold pb-3 color-grey text-center">Preguntas Frecuentes</h2>
+                <div class="accordion" id="accordionFAQ">
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                ¿Cuánto tiempo tarda el envío?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                El envío tarda entre 3 y 7 días hábiles dependiendo de tu ubicación.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Puedo devolver un producto si no me gusta?
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra, siempre que el
+                                producto esté en su estado original.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Qué métodos de pago aceptan?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Aceptamos tarjetas de crédito, débito, transferencia bancaria y MercadoPago.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                ¿Los productos son originales Swarovski?
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Sí, todos nuestros productos son 100% originales y cuentan con garantía oficial.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                ¿Cómo puedo contactar con atención al cliente?
+                            </button>
+                        </h3>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Puedes contactarnos a través del formulario en la sección de contacto o llamando al +54
+                                11 1234 5678.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto" class="container mt-5 pb-3" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto" class="text-center mb-4">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <form method="get" action="#" enctype="application/x-www-form-urlencoded" novalidate>
+                        <ul class="row g-3 form-list">
+                            <li class="col-md-6">
+                                <label for="nombre" class="form-label fw-bold">Nombre</label>
+                                <input type="text" class="form-control contacts-form__field" id="nombre" name="nombre"
+                                    placeholder="Tu nombre" required aria-required="true" autocomplete="given-name">
+                            </li>
+                            <li class="col-md-6">
+                                <label for="apellido" class="form-label fw-bold">Apellido</label>
+                                <input type="text" class="form-control contacts-form__field" id="apellido"
+                                    name="apellido" placeholder="Tu apellido" required aria-required="true"
+                                    autocomplete="family-name">
+                            </li>
+                            <li class="col-md-6">
+                                <label for="telefono" class="form-label fw-bold">Teléfono</label>
+                                <input type="tel" class="form-control contacts-form__field" id="telefono"
+                                    name="telefono" placeholder="Ej: +54 11 1234 5678" autocomplete="tel"
+                                    pattern="^\+?\d{1,4}[\s\d]{6,}$">
+                            </li>
+                            <li class="col-md-6">
+                                <label for="email" class="form-label fw-bold">Correo electrónico</label>
+                                <input type="email" class="form-control contacts-form__field" id="email" name="email"
+                                    placeholder="tu@email.com" required aria-required="true" autocomplete="email">
+                            </li>
+                            <li class="col-12">
+                                <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                                <textarea class="form-control contacts-form__field" id="mensaje" name="mensaje" rows="5"
+                                    placeholder="Escribinos tu consulta..." required aria-required="true"></textarea>
+                            </li>
+                            <li class="col-12 text-center">
+                                <button type="submit" class="btn btn-dark mt-3">Enviar mensaje</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="container-fluid custom-footer" aria-label="Pie de página">
+            <div class="container mx-auto">
+                <div class="row justify-content-center text-center">
+
+                    <!-- Datos de la empresa -->
+                    <div class="col-12 col-md-4 mb-4">
+                        <h5 class="fw-bold mb-3">Swarovski Argentina</h5>
+                        <address>
+                            Av. Ejemplo 1234, CABA, Buenos Aires<br>
+                            Teléfono: <a href="tel:+541112345678">+54 11 1234 5678</a><br>
+                            Email:
+                            <a href="mailto:contacto@swarovski.com">
+                                contacto@swarovski.com
+                            </a>
+                        </address>
+                    </div>
+
+                    <!-- Navegación Footer -->
+                    <nav class="col-12 col-md-4 mb-4" aria-label="Navegación del pie de página">
+                        <h5 class="fw-bold mb-3">Navegación</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#ofrecemos">Ofrecemos</a></li>
+                            <li><a href="#productos">Productos</a></li>
+                            <li><a href="#el-mundo-de-swarovski">El mundo de Swarovski</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Redes sociales -->
+                    <section class="col-12 col-md-4 mb-4" aria-label="Redes sociales">
+                        <h5 class="fw-bold mb-3">Síguenos</h5>
+                        <div class="d-flex">
+                            <a href="https://www.instagram.com/swarovski" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.whatsapp.com/swarovski" target="_blank" rel="noopener noreferrer"
+                                aria-label="WhatsApp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                            <a href="https://www.facebook.com/swarovski" target="_blank" rel="noopener noreferrer"
+                                aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/swarovski" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <small>&copy; 2024 Swarovski Argentina — Todos los derechos reservados</small>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MODAL: Producto Agregado -->
+        <div class="modal fade" id="modal_producto" tabindex="-1" role="dialog" aria-labelledby="agregar_producto_label"
+            aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content shadow-lg rounded-4 border-0">
+                    <div class="modal-header bg-light border-bottom-0">
+                        <h2 class="modal-title fs-4" id="agregar_producto_label">¡Agregado!</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p class="mb-4">El producto ha sido agregado al carrito exitosamente.</p>
+                        <figure class="mt-5">
+                            <i class="bi bi-cart-fill icono-carrito text-success display-1" aria-hidden="true"></i>
+                        </figure>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-primary rounded-3 px-4" data-bs-dismiss="modal">
+                            Seguir comprando
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODAL: Datos de la Alumna -->
+        <div class="modal fade" id="modal_alumna" tabindex="-1" role="dialog" aria-labelledby="datos_alumna_label"
+            aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-color-black color-grey">
+                        <h2 class="modal-title" id="datos_alumna_label">Datos de la alumna</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column flex-lg-row align-items-center gap-4">
+                        <figure class="mb-4 mb-lg-0">
+                            <img src="img/foto-de-alumna/foto-de-perfil.png"
+                                alt="Foto de perfil de Maricel Soledad Dominguez." class="rounded-4">
+                        </figure>
+                        <ul id="datos-alumna" class="list-unstyled">
+                            <li class="fw-bold fs-5 mb-2">Maricel Soledad Dominguez</li>
+                            <li class="mb-2">02/10/1998</li>
+                            <li class="mb-2">
+                                <a href="mailto:Maricel.dominguez@davinci.edu.ar">Maricel.dominguez@davinci.edu.ar</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://linkedin.com/in/maricel_dominguez" target="_blank"
+                                    rel="noopener noreferrer" aria-label="LinkedIn de Maricel Soledad Dominguez">
+                                    <i class="bi bi-linkedin icono-social linkedin" aria-hidden="true"></i> LinkedIn
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://linktr.ee/maricel_dominguez" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram de Maricel Soledad Dominguez">
+                                    <i class="bi bi-instagram icono-social instagram" aria-hidden="true"></i> Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linktr.ee/maricel_dominguez" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Facebook de Maricel Soledad Dominguez">
+                                    <i class="bi bi-facebook icono-social facebook" aria-hidden="true"></i> Facebook
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+        <script src="js/index.js" defer></script>
+        <script src="js/slider.js" defer></script>
+    </main>
+
+</body>
+
+</html>
